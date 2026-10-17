@@ -1,9 +1,13 @@
-# Local ETABS models, outputs, and CSI reference material
+# Local ETABS models and outputs
 /model/
 /docs/reports/
-/tools/*
+/tools/**
+!/tools/**/
+!/tools/**/*.pdf
+!/tools/**/*.chm
 !/tools/dotnet.ps1
 !/tools/bootstrap-sdk.ps1
+/tools/dotnet/
 
 # Local build, dependency, diagnostic and browser artifacts
 /trash/

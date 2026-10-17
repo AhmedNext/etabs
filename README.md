@@ -16,7 +16,7 @@ A Windows C# inspector for an already-open ETABS v22.7 model. It assesses model 
 ./run.ps1 --help
 ```
 
-With no arguments, the launcher generates a local HTML report. Model files, generated reports, CSI manuals/API binaries, bundled SDKs and build artifacts are intentionally excluded from this repository.
+With no arguments, the launcher generates a local HTML report. CSI reference manuals and API help files are included under `tools`. Model files, generated reports, API binaries, bundled SDKs and build artifacts are excluded.
 
 ## Test
 
@@ -34,4 +34,4 @@ Findings distinguish model inputs, unreadable API data, incomplete operations an
 - [Engineering calculations and validation](docs/session2-engineering-validation.md)
 - [Result recovery and table import](docs/result-recovery.md)
 
-CSI documentation and the ETABS application must be obtained separately from their owner. No license for those materials is granted by this repository.
+CSI documentation remains copyrighted by its owner. The ETABS application must be obtained separately. No license for CSI materials is granted by this repository.
