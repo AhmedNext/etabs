@@ -1,0 +1,28 @@
+# Local ETABS models, outputs, and CSI reference material
+/model/
+/docs/reports/
+/tools/*
+!/tools/dotnet.ps1
+!/tools/bootstrap-sdk.ps1
+
+# Local build, dependency, diagnostic and browser artifacts
+/trash/
+/.playwright-mcp/
+**/bin/
+**/obj/
+**/TestResults/
+*.trx
+/.vs/
+/.vscode/
+*.user
+*.suo
+*.log
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0",
+  "confirmed": true,
+  "geometry": {
+    "coincidentTolerance": null,
+    "shortFrameThreshold": {
+      "value": 500,
+      "unit": "mm"
+    },
+    "intentionalCoincidentJoints": [
+      "45",
+      "68",
+      "91",
+      "114",
+      "137",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166"
+    ],
+    "intentionalUnreferencedJoints": [
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166"
+    ],
+    "intentionalDisconnectedElements": [],
+    "requireFloorDiaphragms": true
+  },
+  "loading": {
+    "expectedPatterns": [
+      {
+        "name": "Dead",
+        "type": "Dead",
+        "selfWeightMultiplier": 1.0
+      },
+      {
+        "name": "Live",
+        "type": "Live",
+        "selfWeightMultiplier": 0.0
+      },
+      {
+        "name": "SD",
+        "type": "SuperDead",
+        "selfWeightMultiplier": 0.0
+      },
+      {
+        "name": "EQx",
+        "type": "Quake",
+        "selfWeightMultiplier": 0.0
+      },
+      {
+        "name": "EQy",
+        "type": "Quake",
+        "selfWeightMultiplier": 0.0
+      },
+      {
+        "name": "Wind",
+        "type": "Wind",
+        "selfWeightMultiplier": 0.0
+      }
+    ],
+    "requiredCombinations": [
+      "1.4D",
+      "1.2D+1.6L",
+      "1.2D+1.0L+EQx",
+      "1.2D+1.0L-EQx",
+      "1.2D+1.0L+EQy",
+      "1.2D+1.0L-EQy",
+      "0.9D+EQx",
+      "0.9D-EQx",
+      "0.9D+EQy",
+      "0.9D-EQy"
+    ]
+  },
+  "rebarEstimation": {
+    "defaultRates": {
+      "lowKgPerM3": 120,
+      "baseKgPerM3": 135,
+      "highKgPerM3": 150
+    },
+    "byObjectType": {}
+  },
+  "codes": {
+    "seismic": "ASCE 7-16",
+    "concrete": "ACI 318-19",
+    "framework": "IBC 2018/2021"
+  },
+  "seismic": {
+    "riskCategory": "II",
+    "siteClass": "C",
+    "ss": 0.6,
+    "s1": 0.2,
+    "system": "Special reinforced concrete shear walls",
+    "r": 5.0,
+    "omega0": 2.5,
+    "siteSpecificHazardConfirmed": true
+  },
+  "seismicVerification": {
+    "standard": "ASCE 7-16",
+    "cd": 4.5,
+    "ie": 1.0,
+    "driftLimit": 0.02,
+    "spectrumMinimumRatio": 1.0,
+    "beta": 1.0,
+    "axes": [
+      {
+        "direction": "X",
+        "elasticCase": "EQx",
+        "spectrumCase": "RSx"
+      },
+      {
+        "direction": "Y",
+        "elasticCase": "EQy",
+        "spectrumCase": null
+      }
+    ],
+    "gravityLoads": [
+      {
+        "case": "Dead",
+        "factor": 1.2
+      },
+      {
+        "case": "SD",
+        "factor": 1.2
+      },
+      {
+        "case": "Live",
+        "factor": 0.5
+      }
+    ],
+    "gravityBasisConfirmed": true
+  },
+  "analysis": {
+    "driftRatioLimit": 0.02,
+    "driftCases": [
+      "EQx",
+      "EQy"
+    ],
+    "driftDirections": [
+      "X",
+      "Y"
+    ],
+    "modalCase": "Modal",
+    "minimumCumulativeUx": 0.9,
+    "minimumCumulativeUy": 0.9
+  },
+  "phase3Review": {
+    "referencesConfirmed": true,
+    "referenceSource": "ASCE 7-16 Hand Calculations and ETABS Baseline Verification",
+    "expectedConcreteCode": "ACI 318-19",
+    "modalCase": "Modal",
+    "torsionEnvelopeConfirmed": true
+  }
+}

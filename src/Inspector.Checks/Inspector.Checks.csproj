@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework><AssemblyName>Inspector.Checks</AssemblyName><RootNamespace>Inspector</RootNamespace></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Inspector.Core\Inspector.Core.csproj" /></ItemGroup>
+</Project>

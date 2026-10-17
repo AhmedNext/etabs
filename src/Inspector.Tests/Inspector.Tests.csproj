@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0-windows</TargetFramework><PlatformTarget>x64</PlatformTarget><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable><AssemblyName>Inspector.Tests</AssemblyName><RootNamespace>Inspector.Tests</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inspector.Core\Inspector.Core.csproj" />
+    <ProjectReference Include="..\Inspector.Etabs\Inspector.Etabs.csproj" />
+    <ProjectReference Include="..\Inspector.Engine\Inspector.Engine.csproj" />
+    <ProjectReference Include="..\Inspector.Checks\Inspector.Checks.csproj" />
+    <ProjectReference Include="..\Inspector.Cli\Inspector.Cli.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2"><PrivateAssets>all</PrivateAssets></PackageReference>
+    <Reference Include="ETABSv1"><HintPath>$(EtabsInstallDir)\ETABSv1.dll</HintPath><Private>true</Private><EmbedInteropTypes>false</EmbedInteropTypes></Reference>
+  </ItemGroup>
+</Project>

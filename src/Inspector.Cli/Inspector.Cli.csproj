@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><PlatformTarget>x64</PlatformTarget><BuiltInComInteropSupport>true</BuiltInComInteropSupport><AssemblyName>Inspector</AssemblyName><RootNamespace>Inspector</RootNamespace><StartupObject>Program</StartupObject></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inspector.Core\Inspector.Core.csproj" />
+    <ProjectReference Include="..\Inspector.Etabs\Inspector.Etabs.csproj" />
+    <ProjectReference Include="..\Inspector.Engine\Inspector.Engine.csproj" />
+    <ProjectReference Include="..\Inspector.Checks\Inspector.Checks.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+  </ItemGroup>
+</Project>

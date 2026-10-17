@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0-windows</TargetFramework><PlatformTarget>x64</PlatformTarget><BuiltInComInteropSupport>true</BuiltInComInteropSupport><AssemblyName>Inspector.Etabs</AssemblyName><RootNamespace>Inspector</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
+    <ProjectReference Include="..\Inspector.Core\Inspector.Core.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+    <Reference Include="ETABSv1"><HintPath>$(EtabsInstallDir)\ETABSv1.dll</HintPath><Private>true</Private><EmbedInteropTypes>false</EmbedInteropTypes></Reference>
+  </ItemGroup>
+  <Target Name="CheckEtabsLibrary" BeforeTargets="ResolveReferences" Condition="!Exists('$(EtabsInstallDir)\ETABSv1.dll')"><Error Text="Installed ETABSv1.dll was not found. Set EtabsInstallDir with -p:EtabsInstallDir=... ." /></Target>
+</Project>
